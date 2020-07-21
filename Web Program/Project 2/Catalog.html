@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html> 
+    <head> 
+        <title>The Zoo</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <script src="code.js" type="text/javascript"></script>
+        <link href="main.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Ewert" rel="stylesheet">
+    </head>
+
+
+<body>
+    <header>
+        <img src="Images/ZooLogo.jpg" id="logo" height="150">
+        <h1 id="HeadWords">The Downtown Zoo.</h1><br>
+    </header>
+    
+    <div class="page">
+        <div class="column menu">
+            <ul>
+                <li><a href="home.html">Main Page</a></li>
+                <li><a href="Calendar.html">Calendar</a></li>
+                <li><a href="Catalog.html">Catalog</a></li>
+                <li><a href="index.html">Index</a></li>
+                <li><a href="Kids.html">Kids Page</a></li>
+                <li><a href="Registration.html">Registration Page</a></li>
+                <li><a href="Animals.html">Animal Exhibits</a></li>
+            </ul>
+        </div>
+
+        <div class="column content">
+            <h1>Catalog</h1>
+            <div id="data" class="flex">
+                <div class="gallery" onclick="hideFrog()">
+                    <img src="Images/StuffFrog.jpg" >
+                    <div class="desc">Stuffed Frog</div>
+                </div>
+                <div class="gallery" onclick="hideZebra()">
+                    <img src="Images/StuffZebra.jpg">
+                    <div class="desc">Stuffed Zebra</div>
+                </div>
+
+
+                <div class="gallery" onclick="hideLlama()">
+                    <img src="Images/StuffLlama.jpg">
+                    <div class="desc">Stuffed Llama</div>
+                </div>
+
+                <div class="gallery" onclick="hidePeng()">
+                    <img src="Images/StuffPenguin.jpg">
+                    <div class="desc">Stuffed Penguin</div>
+                </div>
+
+                <div class="gallery" onclick="hideNarw()">
+                    <img src="Images/StuffNarwhal.jpg">
+                    <div class="desc">Stuffed Narwhal</div>
+                </div>
+            </div>
+            <div id="frog">
+                <img src="Images/StuffFrog.jpg" ><br>
+                This is great for the children it is a plush frog.<br>
+                Please list the ammount you wish to purchase:<input type="number" id="qty1">
+                <button onclick="frogpur()">Buy Now</button>
+                
+            </div>
+            <div id="zebra">
+                <img src="Images/StuffZebra.jpg" ><br>
+                This is great for fans of the coolest animal around the zebra.<br><br>
+                Please list the ammount you wish to purchase:<input type="number" id="qty2">
+                <button onclick="zebrapur()">Buy Now</button>
+            
+            </div>
+            <div id="llama">
+                <img src="Images/StuffLlama.jpg" ><br>
+                The most famous animal of all, well known around the world for its various uses get yourself a stuffed llama.<br><br>
+                Please list the ammount you wish to purchase:<input type="number" id="qty3">
+                <button onclick="llamapur()">Buy Now</button>
+           
+            </div>
+            <div id="peng">
+                <img src="Images/StuffPenguin.jpg" ><br>
+                This is the mascot of a few various sports teams. Penguins have also been featured in several movies and would be a great purchase for any child.<br><br>
+                Please list the ammount you wish to purchase:<input type="number" id="qty4">
+                <button onclick="pengpur()">Buy Now</button>
+           
+            </div>
+            <div id="narw">
+                <img src="Images/StuffNarwhal.jpg" ><br>
+                This is more of the stuffed animals aimed for adults. If you wish to purchase one go ahead and enjoy it.<br><br>
+                Please enter the ammount you wish to purchase:<input type="number" id="qty5">
+                <button onclick="narwpur()">Buy Now</button>
+           
+            </div>
+            <div id="results">
+                <div id="subTotal"></div>
+                <div id="shipping"></div>
+                <div id="tax"></div>
+                <div id="total"></div>
+            </div>	
+        </div>
+    </div>
+
+    <footer>
+        <a href="Catalog.html">Click here to go back to the Catalog page.</a>
+    </footer>
+</body>
+</html>

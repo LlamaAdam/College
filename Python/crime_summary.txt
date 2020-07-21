@@ -1,0 +1,53 @@
+State                    Reported Crimes
+Alabama                        9,240,875
+Alaska                         1,261,074
+Arizona                       12,895,407
+Arkansas                       5,201,698
+California                    83,503,529
+Colorado                       9,611,658
+Connecticut                    7,269,380
+Delaware                       1,772,729
+District of Columbia           2,639,622
+Florida                       42,350,205
+Georgia                       17,704,591
+Hawaii                         3,336,866
+Idaho                          2,066,515
+Illinois                      28,816,216
+Indiana                       12,746,017
+Iowa                           5,520,310
+Kansas                         6,101,845
+Kentucky                       6,335,915
+Louisiana                     11,233,275
+Maine                          2,155,986
+Maryland                      12,370,036
+Massachusetts                 13,557,322
+Michigan                      26,626,570
+Minnesota                      9,479,026
+Mississippi                    4,927,760
+Missouri                      13,153,323
+Montana                        1,745,852
+Nebraska                       3,210,702
+Nevada                         3,875,145
+New Hampshire                  1,631,485
+New Jersey                    17,635,654
+New Mexico                     4,572,280
+New York                      41,988,500
+North Carolina                16,864,189
+North Dakota                     856,484
+Ohio                          25,809,430
+Oklahoma                       8,301,051
+Oregon                         8,552,042
+Pennsylvania                  19,376,812
+Rhode Island                   2,418,005
+South Carolina                 9,233,768
+South Dakota                   1,002,118
+Tennessee                     11,933,596
+Texas                         51,630,978
+Utah                           4,587,824
+Vermont                        1,014,118
+Virginia                      11,876,310
+Washington                    14,896,594
+West Virginia                  2,396,629
+Wisconsin                      9,629,416
+Wyoming                          918,763
+United States                630,502,101

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>GS animation example 1 unit 2</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js">
+    </script>
+    <script src="gsanimation1.js"></script>
+    <link href="flex_css.css" rel='stylesheet' type='text/css' />
+</head>
+<body onload="startmaster()">
+   <div ><img src="LP2_logo.svg"class="logo"></div>
+       <div class="center">cards for you</div>
+<ul class="navigation">
+  <span style="font-size:18px;cursor:pointer" onclick="openNav()">&#9776; </span>
+   <span class="rgt"  onclick="openNav_right()">subscribe</span>
+</ul>
+    <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>
+   <div id="mySidenav_right" class="sidenav_right">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav_right()">&times;</a>
+  <form>
+  </form>
+</div>
+
+
+<div class="flex-container-row1">
+  <div class="card1-item"><img src="thumb_image.png"></div>
+  <div class="card2-item"><img src="thumb_image.png"></div>
+</div>
+<div class="flex-container-row2">
+    <div class="cardh-item"><img src="holiday_card_holder.png"></div>
+    </div>
+   <div class="flex-container-row1-hidden">
+      <div class="card1-item"><img src="thumb_image.png"></div>
+      <div class="card2-item"><img src="thumb_image.png"></div>
+    </div>
+       <div class="flex-container-row1-hidden">
+      <div class="card1-item"><img src="thumb_image.png"></div>
+      <div class="card2-item"><img src="thumb_image.png"></div>
+</div>
+  <div class="flex-container-row1">
+  <div class="card1-item"><img src="thumb_image.png"></div>
+  <div class="card2-item"><img src="thumb_image.png"></div>
+</div>
+ <ul class="navigation">
+  <li><a href="#">jobs</a></li>
+  <li><a href="#">about us</a></li>
+  <li><a href="#">faqs</a></li>
+
+</ul>
+
+  <script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+}
+ function openNav_right() {
+    document.getElementById("mySidenav_right").style.width = "250px";
+    document.getElementById("main").style.marginright = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+}
+  function closeNav_right(){
+    document.getElementById("mySidenav_right").style.width = "0";
+    document.getElementById("main").style.marginright= "0";
+}
+</script>
+</body>
+</html>

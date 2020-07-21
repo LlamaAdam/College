@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Kansas City Soccer Club</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" href="main.css">
+        <script src="code.js" type="text/javascript"></script>
+        <meta name="viewport" content="user-scalable=no, width=device-width"/>
+        <link href="pc.css" rel="stylesheet" type="text/css">
+        <link href="phone.css" rel="stylesheet" type="text/css" media=" only screen and (max-width:480px)">
+        <link href="tablet.css" rel="stylesheet" type="text/css" media=" only screen and (min-width:481px) and (max-width:800px)">
+        <link href="https://fonts.googleapis.com/css?family=Germania+One" rel="stylesheet">
+    </head>
+
+
+<body>
+
+<div class="container">
+  <div class="logo">
+    <img src="images/top.png" alt="KC Soccer Club Logo">
+  </div>
+  <div class="nav">
+      <a href="home.html">Home </a>
+    <a href="events.html">Events</a>
+    <a href="history.html">History</a>
+    <a href="awards.html">Awards</a>
+    <a href="tutorial.html">Tutorial</a>
+    <a href="products.html">Products</a>
+    <a href="join.html">Join Now!</a>
+      <a href="newsletter.html">New's Corner!</a>
+  </div>
+  <div class="content_nf">
+    <!-- Images used to open the lightbox -->
+   <div class="row">
+     <div class="column">
+       <img src="images/child-613199_mini.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow"><br>Kid's First Game
+     </div>
+     <div class="column">
+       <img src="images/soccer-673488_mini.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow"><br>15-18 Y/O game
+     </div>
+     <div class="column">
+       <img src="images/soccer-673599_mini.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow"><br>Parent's Game
+     </div>
+     <div class="column">
+       <img src="images/soccer-1273968_mini.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow"><br>Early Game
+     </div>
+     <div class="column">
+       <img src="images/football-3471402_mini.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow"><br>Kids Vrs Parents
+     </div>
+   </div>
+
+   <!-- The Modal/Lightbox -->
+   <div id="myModal" class="modal">
+     <span class="close cursor" onclick="closeModal()">&times;</span>
+     <div class="modal-content">
+
+       <div class="mySlides">
+         <div class="numbertext">1 / 5</div>
+         <img src="images/child-613199.jpg" style="width:100%">
+       </div>
+
+       <div class="mySlides">
+         <div class="numbertext">2 / 5</div>
+         <img src="images/soccer-673488.jpg"style="width:100%">
+       </div>
+
+       <div class="mySlides">
+         <div class="numbertext">3 / 5</div>
+         <img src="images/soccer-673599.jpg" style="width:100%">
+       </div>
+
+       <div class="mySlides">
+         <div class="numbertext">4 / 5</div>
+         <img src="images/soccer-1273968.jpg" style="width:100%">
+       </div>
+       <div class="mySlides">
+         <div class="numbertext">5 / 5</div>
+         <img src="images/football-3471402.jpg" style="width:100%">
+       </div>
+
+       <!-- Next/previous controls -->
+       <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+       <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+       <!-- Caption text -->
+       <div class="caption-container">
+         <p id="caption"></p>
+       </div>
+
+       <!-- Thumbnail image controls -->
+       <div class="column">
+         <img class="demo" src="images/child-613199_mini.jpg" onclick="currentSlide(1)" alt="Kid's First Game">
+       </div>
+
+       <div class="column">
+         <img class="demo" src="images/soccer-673488_mini.jpg" onclick="currentSlide(2)" alt="15-18 Year Old game">
+       </div>
+
+       <div class="column">
+         <img class="demo" src="images/soccer-673599_mini.jpg" onclick="currentSlide(3)" alt="Parent's Game">
+       </div>
+
+       <div class="column">
+         <img class="demo" src="images/soccer-1273968_mini.jpg" onclick="currentSlide(4)" alt="Early Game">
+       </div>
+       <div class="column">
+         <img class="demo" src="images/football-3471402_mini.jpg" onclick="currentSlide(5)" alt="Kids Vrs Parents Game">
+       </div>
+     </div>
+   </div>
+  </div>
+  <div class="social">
+    Contact Us: 123 Main St Kansas City, Mo 64108 <br>
+    Phone:816-555-5555 <br>
+    Email:KCSportsClub@gmail.com
+  </div>
+
+</div>
+
+</body>

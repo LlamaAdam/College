@@ -1,0 +1,122 @@
+INSERT INTO PILOT
+Values('16','Geoffrey','GHM','Marjory', 81000 );
+INSERT INTO PILOT
+Values('18','Darien','DJA','Adena', 48000 );
+INSERT INTO PILOT
+Values('22','Corrine','CBT','Tahlia', 74000 );
+INSERT INTO PILOT
+Values('28','Tristin','TLS','Susie', 79000 );
+INSERT INTO PILOT
+Values('34','Gertrude','GSD','Denholm', 81458 );
+INSERT INTO PILOT
+Values('57','Jaron','JCA','Alysia', 95107 );
+INSERT INTO PILOT
+Values('68','Leone','LIW','Wesley', 99775 );
+
+
+DocumentID, FirstName, Initials, Lastname
+
+INSERT INTO Passenger
+Values('1','Summer','SAC','Charnette');
+INSERT INTO Passenger
+Values('2','Daniella','DSD','Dacre');
+INSERT INTO Passenger
+Values('3','Robyn','RVJ','Jean');
+INSERT INTO Passenger
+Values('4','Daxton','DZJ','Janette');
+INSERT INTO Passenger
+Values('5','Madeleine','MHB','Buster');
+INSERT INTO Passenger
+Values('6','Alexia','AMW','Vance');
+INSERT INTO Passenger
+Values('7','Tawnie','TLL','Lavena');
+INSERT INTO Passenger
+Values('8','Cody','CCB','Bethany');
+INSERT INTO Passenger
+Values('9','Coretta','CHJ','Jaime');
+INSERT INTO Passenger
+Values('10','Theobald','TTA','Arden');
+
+Airplane: AirplaneID, TypeID
+AirplaneType: TypeID, Name, Description, NoOfSeats
+
+
+INSERT INTO AIRPLANETYPE
+Values('E175', 'EMBRAER-175', 'Most Popular Mid Range Plane', 88);
+
+INSERT INTO AIRPLANETYPE
+Values('A42', 'ATR-42', 'Extremely Small Regional Plane', 12);
+
+INSERT INTO AIRPLANETYPE
+Values('B747', 'BOEING 747-400 ', 'For Long Range Group Trips', 408);
+
+INSERT INTO AIRPLANETYPE
+Values('B757', 'Boeing 757-300', 'Older Long Range Boeing Jet', 240);
+
+INSERT INTO AIRPLANETYPE
+Values('B777', 'Boeing 777-200', 'Long Range Boeing Jet',  278);
+
+INSERT INTO AIRPLANETYPE
+Values('ERJ170', 'Embraer ERJ-170', 'Larger Group Short Range Flights', 68);
+
+INSERT INTO AIRPLANETYPE
+Values('CRJ200', 'Bombardier CRJ-200', 'Short Range Jet', 50);
+
+INSERT INTO AIRPLANETYPE
+Values('MD88', 'McDonnell Douglas MD-88', 'Mid Range McDonnell Douglas', 150);
+
+INSERT INTO AIRPLANETYPE
+Values('B717','Boeing 717-200','Short Range Boeing', 95);
+
+INSERT INTO AIRPLANETYPE
+Values('A319', 'Airbus A319-100', 'Long range Airbus', 319);
+
+
+INSERT INTO Airplane
+Values('BB09', 'A42');
+INSERT INTO Airplane
+Values('BB08', 'B747');
+INSERT INTO Airplane
+Values('BB07', 'B757');
+INSERT INTO Airplane
+Values('BB06', 'B777');
+INSERT INTO Airplane
+Values('BB05', 'ERJ170');
+INSERT INTO Airplane
+Values('BB04', 'CRJ200');
+INSERT INTO Airplane
+Values('BB03', 'MD88');
+INSERT INTO Airplane
+Values('BB02', 'B717');
+INSERT INTO Airplane
+Values('BB01', 'A319');
+
+insert into FLIGHTCONCESSION
+values('D01','MCI','KCRZ',b'1010111','07:25');
+insert into FLIGHTCONCESSION
+values('D02','DCA','EGVN',b'1111111','08:30');
+insert into FLIGHTCONCESSION
+values('D03','ICN','VA2C',b'1010101','12:00');
+insert into FLIGHTCONCESSION
+values('D04','ATL','CDG',b'0101010','09:00');
+insert into FLIGHTCONCESSION(FlightNo, Origin, Destination, DayOfTheWeek, TimeOfDay) 
+values('D05','JAX','MAN',b'1101010','05:00');
+
+
+insert into SCHEDULEDFLIGHT
+values('D05', '2019-06-03', '28', 'BB07');
+insert into SCHEDULEDFLIGHT 
+values('D04', '2019-06-15', '22', 'BB08');
+insert into SCHEDULEDFLIGHT 
+values('D03', '2019-06-20', '18', 'BB02');
+insert into SCHEDULEDFLIGHT 
+values('D02', '2019-06-19', '16', 'BB09');
+insert into SCHEDULEDFLIGHT 
+values('D01', '2019-06-18', '12', 'BB01');
+
+
+
+
+
+
+

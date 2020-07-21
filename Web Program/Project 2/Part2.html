@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html> 
+    <head> 
+        <title>The Zoo</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <script src="code.js"></script>
+        <link href="main.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Ewert" rel="stylesheet">
+    </head>
+
+
+<body>
+    <header>
+        <img src="Images/ZooLogo.jpg" id="logo" height="150">
+        <h1 id="HeadWords">The Downtown Zoo.</h1><br>
+    </header>
+    
+    <div class="page">
+        <div class="column menu">
+            <ul>
+                <li><a href="home.html">Main Page</a></li>
+                <li><a href="Calendar.html">Calendar</a></li>
+                <li><a href="Catalog.html">Catalog</a></li>
+                <li><a href="index.html">index</a></li>
+                <li><a href="Kids.html">Kids Page</a></li>
+                <li><a href="Registration.html">Registration Page</a></li>
+                <li><a href="Animals.html">Animal Exhibits</a></li>
+            </ul>
+        </div>
+
+        <div class="column content">
+            <h1>Survey</h1>
+            
+    <form action="welcome.html" name="Myform" method="get">
+    <button type="button" id="start" value="start" onclick="myform()">Start survey</button>
+    <div id="question"></div>
+    <div id="textbox"></div> 
+    <button type="button" id="next" onclick="myform()">Next</button>    
+    <input type="submit" id="sbutton" value="submit">
+</form>
+            </div>
+    </div>
+
+</body>
+</html>

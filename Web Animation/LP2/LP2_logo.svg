@@ -1,0 +1,21 @@
+<svg width="201" height="151" xmlns="http://www.w3.org/2000/svg" style="vector-effect: non-scaling-stroke;">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="153" width="203" y="-1" x="-1"/>
+  <g style="vector-effect: non-scaling-stroke;" display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+   <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+  </g>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <path id="svg_17" d="m7.994995,29.149628l36.335571,-30.149628l145.664429,0l0,151l-182,0l0,-120.850372z" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#76ccb2"/>
+  <text style="vector-effect: non-scaling-stroke;" xml:space="preserve" text-anchor="start" font-family="'Palatino Linotype', 'Book Antiqua', Palatino, serif" font-size="24" id="svg_3" y="51.452423" x="1" stroke-width="0" stroke="#000" fill="#6bb2db"/>
+  <text style="cursor: move;" transform="matrix(1.31957, 0, 0, 1, -48.9332, 0)" xml:space="preserve" text-anchor="start" font-family="'Palatino Linotype', 'Book Antiqua', Palatino, serif" font-size="36" id="svg_5" y="48.452423" x="65.334559" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#4687af">C</text>
+  <text style="vector-effect: non-scaling-stroke;" xml:space="preserve" text-anchor="start" font-family="'Palatino Linotype', 'Book Antiqua', Palatino, serif" font-size="36" id="svg_7" y="77.452423" x="65" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#2e59ad">F</text>
+  <text style="vector-effect: non-scaling-stroke;" xml:space="preserve" text-anchor="start" font-family="'Palatino Linotype', 'Book Antiqua', Palatino, serif" font-size="36" id="svg_8" y="102.452423" x="79" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#2e59ad">Y</text>
+  <text xml:space="preserve" text-anchor="start" font-family="'Palatino Linotype', 'Book Antiqua', Palatino, serif" font-size="18" id="svg_14" y="43.452423" x="68" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#e52047">ards</text>
+  <text xml:space="preserve" text-anchor="start" font-family="'Palatino Linotype', 'Book Antiqua', Palatino, serif" font-size="18" id="svg_15" y="74.452423" x="81" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#e52047">or</text>
+  <text xml:space="preserve" text-anchor="start" font-family="'Palatino Linotype', 'Book Antiqua', Palatino, serif" font-size="18" id="svg_16" y="100.452423" x="100" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#e52047">ou</text>
+ </g>
+</svg>

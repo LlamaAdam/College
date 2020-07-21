@@ -1,0 +1,135 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Untitled Document</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link href="main.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<table width="100%" height="178"   >
+  <tr valign="top">
+    <td height="21" colspan="2">
+        <p class="header">IEBGENER STUDY GUIDE </p>
+    </td>
+  </tr>
+  <tr>
+
+      <td width="26%" valign="top"><table class="navtable"width="80%" >
+      <tr>
+        <td><a href="home.htm">HOME</a></td>
+      </tr>
+      <tr>
+        <td ><a href="HWproblems.htm">HOMEWORK</a></td>
+      </tr>
+      <tr>
+        <td ><a href="HWanswer.htm">HOME ANSWERS </a></td>
+      </tr>
+      <tr>
+        <td ><a href="examplepg1.htm">EXAMPLE 1</a> </td>
+      </tr>
+      <tr>
+        <td ><a href="examplepg2.htm">EXAMPLE 2 </a></td>
+      </tr>
+      <tr>
+        <td ><a href="examplepg3.htm">EXAMPLE 3 </a></td>
+      </tr>
+    </table>      
+    </td>
+    <td class="maintable" width="74%" valign="top">
+    <h2>The IEBGENER utility is one of IBM's first data set utilities. This utility will allow you to do the following things </h2>
+      <li>copy data sets from any input device and put it on any other input device</li>
+      <li>allows input records to be edited before creating a new output</li>
+      <li>allows single sequential files to broken up into multiple PDS members</li>
+      <li>allows two records from a sequential data set to be combined into one record</li>
+      
+      <p>There are two different types of IEBGENER's you can use one is the basic IEBGENER and the other is an advanced IEBGENER. The basic IEBGENER will allow you to copy any file from one input source to an output source of your choice. This is the template for a basic IEBGENER </p>
+      <h3>Templete example </h3>
+   
+          <table width="400"  cellspacing="0" cellpadding="0">
+  <tr>
+    <td>//STEP1 EXEC PGM=IEBGENER </td>
+  </tr>
+  <tr>
+    <td>//SYSPRINT DD SYSOUT=* </td>
+  </tr>
+  <tr>
+    <td>//SYSUT1 DD input data information </td>
+  </tr>
+  <tr>
+    <td>//SYSUT2 DD output data information</td>
+  </tr>
+  <tr>
+    <td>//SYSIN DD DUMMY </td>
+  </tr>
+  <tr>
+    <td>// </td>
+  </tr>
+      </table>
+        
+       <h3>EXAMPLE #1 </h3>
+   <table class="ex1table" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="435" valign="top">basic IEBGENER this example prints out the numbers 1-10</td>
+      </tr>
+      <tr>
+        <td width="435" valign="top">
+            
+            <br />//STEP1 EXEC PGM=IEBGENER 
+            <br />//SYSPRINT DD SYSOUT=* 
+            <br />//SYSUT1 DD DATA 
+            <br />0001 
+            <br />0002 
+            <br />0003 
+            <br />0004 
+            <br />0005 
+            <br />0006 
+            <br />0007 
+            <br />0008 
+            <br />0009 
+            <br />0010 
+            <br />//SYSUT2 DD SYSOUT=* 
+            <br />//SYSIN DD DUMMY 
+            <br />// 
+            
+          </td>
+      </tr>
+    </table>
+   <p>The advanced IEBGENER will allow you to edit the input data set through a series of control cards. These cards are inserted after the //SYSIN DD card. Notice in this template that the //SYSIN DD DUMMY changes to a //SYSIN DD * this forces you to put in in-stream data this data will be the control cards you need to use. </p>
+   
+   <h3>EXAMPLE #2 </h3>
+   <table class= "ex2table" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="500" valign="top">advanced IEBGENER this example show how to add 5* to the end of each record </td>
+      </tr>
+      <tr>
+        <td width="413" valign="top"><p>//STEP1 EXEC PGM=IEBGENER 
+            <br />//SYSPRINT DD SYSOUT=* 
+            <br />//SYSUT1 DD DATA 
+            <br />0001 
+            <br />0002 
+            <br />0003 
+            <br />0004 
+            <br />0005 
+            <br />0006 
+            <br />0007 
+            <br />0008 
+            <br />0009 
+            <br />0010 
+            <br />//SYSUT2 DD SYSOUT=* 
+            <br/>GENERATE MAXFIELDS=1,MAXLITS=5 
+            <br />RECORD FIELD=(5,'*****',5) 
+            <br />// 
+            </p></td>
+      </tr>
+    </table>
+   
+   
+   
+   </td>     <!--end of main table cell -->
+  </tr>
+  
+</table>
+</body>
+</html>

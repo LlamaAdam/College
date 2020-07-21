@@ -1,0 +1,168 @@
+CREATE TABLE Trainer(TrainerID varchar(7) NOT NULL, 
+FirstName text DEFAULT NULL,
+LasstName text DEFAULT NULL, 
+Salary FLOAT DEFAULT NULL,
+DaysAvailable INT DEFAULT NULL,
+PRIMARY KEY (TrainerID));
+
+CREATE TABLE client (ClientID varchar(7) NOT NULL, 
+FirstName text DEFAULT NULL,
+LasstName text DEFAULT NULL, 
+LegalAddress text DEFAULT NULL, 
+Phone text DEFAULT NULL, 
+PRIMARY KEY (ClientID));
+
+CREATE TABLE contract (ContractNo int NOT NULL, 
+ClientID varchar(7) NOT NULL, 
+TrainerID varchar(7) NOT NULL,
+ExperationDate DATE NOT NULL, 
+PRIMARY KEY (ContractNo), 
+KEY FK_Contract_to_Client (ClientID), 
+CONSTRAINT FK_Contract_to_Client FOREIGN KEY (ClientID) REFERENCES client (ClientID),
+KEY FK_Contract_to_Trainer (TrainerID), 
+CONSTRAINT FK_Contract_to_Trainer FOREIGN KEY (TrainerID) REFERENCES Trainer (TrainerID));
+
+CREATE TABLE Weights (WeightID varchar(7) NOT NULL,
+WeightType text DEFAULT NULL,
+WeightIncruments int DEFAULT NULL,
+PRIMARY KEY (WeightID));
+
+CREATE TABLE WorkoutTime(PlanID varchar(7) NOT NULL,
+ContractNo int NOT NULL,
+Days varchar(3) DEFAULT NULL,
+Time time DEFAULT NULL,
+Workouts varchar(7) NOT NULL,
+PRIMARY KEY (PlanID),
+KEY FK_WorkoutTime_to_Contract (ContractNo), 
+CONSTRAINT FK_WorkoutTime_to_Contract FOREIGN KEY (ContractNo) REFERENCES contract(ContractNo));
+
+CREATE TABLE WorkoutPlan (WorkoutID varchar(7) NOT NULL,
+ExerciseName text DEFAULT NULL,
+Sets varchar(6) DEFAULT NULL,
+Weights_Used varchar(7) DEFAULT NULL,
+KEY FK_WorkoutPlan_to_Weights (Weights_Used), 
+CONSTRAINT FK_WorkoutPlan_to_Weights FOREIGN KEY (Weights_Used) REFERENCES Weights (WeightID)
+);
+
+
+
+INSERT INTO client VALUES 
+("CSS01","Solomon"," Smith","12 Main St","816-686-4119"),
+("CEJ01","Elizabeth","Johnson","108 Curle Rd","913-679-6259"),
+("CRW01","Raphael","Williams","131 Westrbook Dr","503-724-5047"),
+("CJJ01","Jane","Jones","509 101st St","804-754-327"),
+("CEB01","Edgar"," Brown","521 Americana Dr","816-286-8273"),
+("CKD01","Katy","Davis","42 Memorial Ln","703-680-7093"),
+("CAM01","Arjun","Miller","84 Crossroad Way","228-256-7779"),
+("CHW01","Hana","Wilson","508 Southwest Trfy","913-404-8249"),
+("CJM01","Jeremy","Moore","404 Westport Dr","202-561-7648"),
+("CKT01","Kitty","Taylor","93 NE Russel Rd","757-499-4422");
+
+INSERT INTO Trainer VALUES 
+("TDA01","Darren","Anderson",35975,1011010),
+("TVT01","Veronica","Thomas",60483,0011110),
+("TPJ01","Pete","Jackson",87083,1101000),
+("THH01","Hafsa","Harris",47552,1111101),
+("TWW01","Wesley","White",80071,0100100),
+("TIM01","Isabelle","Martin",77460,0010100),
+("THC01","Harry","Carter",84269,0001111),
+("THR01","Harris","Reed",34883,1101010),
+("TSC01","Samuel","Cook",66436,0001100),
+("TAB01","Andrew","Bell",75852,0110011);
+
+insert into contract values
+(1,"CJJ01","TPJ01",'2022-10-1'),
+(2,"CJM01","TSC01",'2021-1-5'),
+(3,"CRW01","TIM01",'2022-2-7'),
+(4,"CHW01","TAB01",'2022-7-11'),
+(5,"CSS01","TVT01",'2021-9-1'),
+(6,"CEB01","THR01",'2022-7-9'),
+(7,"CKT01","TDA01",'2021-10-12'),
+(8,"CKD01","THH01",'2020-9-3'),
+(9,"CEJ01","TWW01",'2021-10-2'),
+(10,"CAM01","THC01",'2022-8-27');
+
+insert into weights values
+("BB05","Barbell",5),
+("DB25","Dumbell",2.5),
+("KB10","Kettleball",10),
+("CB25","CurlBar",10),
+("CM05","CalfMachine",5),
+("PB00","PullupBar",0),
+("DI00","DipBar",0),
+("MF05","Machine fly",0),
+("LE05","LegExtension",5),
+("LP05","LegPress",5),
+("LC05","LegCurl",5);
+
+INSERT INTO WORKOUTPLAN VALUES
+("W01","HAMSTRING CURL","3X10-6","LE05"),
+("W01","LEG PRESS","3X5-7","LP05"),
+("W01","HIP THRUST","2X10","BB05"),
+("W01","BB BENCH","3X16","BB05"),
+("W01","CHEST SUPPORTED ROW","3X10-6","DB25"),
+("W01","SHOULDER PRESS","2X8","DB25"),
+("W01","PULLDOWN","2X10","PB00"),
+("W02","SHOULDER PRESS","4X6","DB25"),
+("W02","FLAT CHEST PRESS","4X6","DB25"),
+("W02","PEC FLY","3X10","MF05"),
+("W02","LATERAL RAISE","4X10","DB25"),
+("W02","TRICEP EXT","3X8","KB10"),
+("W02","PUSH UP","2X9","DI00"),
+("W03","PULLDOWN","4X6","PB00"),
+("W03","CHEST SUPPORTED ROW","4X6","DI00"),
+("W03","REAR DELT ","3X8","DB25"),
+("W03","STRAIGHT ARM PULL OVER","3X10","KB10"),
+("W03","PREACHER CURL","3X8","CB25"),
+("W03","HAMMER CURL","2X10","DB25"),
+("W04","LEG PRESS","4X8-10","LP05"),
+("W04","HIP THRUST","3X10","BB05"),
+("W04","HIP EXTENSION","2X10","LE05"),
+("W04","HAMSTRING CURL","3X8","LC05"),
+("W04","LEG EXTENSION","3X8","LE05"),
+("W04","HIP ABDUCTION","2X10","LE05"),
+("W05","STANDING CALF","4X8 ","CM05"),
+("W05","HAMSTRING CURL","3X10-6","LP05"),
+("W05","SQUAT, LEG PRESS","3X5-7","BB05"),
+("W05","HIP THRUST","2X10","DI00"),
+("W05","DB OR BB BENCH","3X10","BB05"),
+("W05","CHEST SUPPORTED ROW","3X10-6","DB25"),
+("W05","SHOULDER PRESS","2X8",""),
+("W05","PULLDOWN","2X8-10","PB05"),
+("W06","SHOULDER PRESS","4X6","DB25"),
+("W06","FLAT CHEST PRESS","4X6","DB25"),
+("W06","PEC FLY","3X10","MF05"),
+("W06","LATERAL RAISE","4X10","DB25"),
+("W06","TRICEP EXT","3X8","KB10"),
+("W06","PUSH UP OR DIP","2X9","DI00"),
+("W07","PULLDOWN","4X6","PB05"),
+("W07","CHEST SUPPORTED ROW","4X6","DB25"),
+("W07","REAR DELT ","3X8","KB10"),
+("W07","STRAIGHT ARM PULL OVER","3X10","KB10"),
+("W07","PREACHER CURL","3X8","CB25"),
+("W07","HAMMER CURL","2X10","LP05"),
+("W08","LEG PRESS, SQUAT","4X8-10","BB05"),
+("W08","HIP THRUST","3X10","BB05"),
+("W08","HIP EXTENSION","2X10","LE05"),
+("W08","HAMSTRING CURL","3X8","DB25"),
+("W08","LEG EXTENSION","3X8","LE05"),
+("W08","HIP ADDUCTION","2X10","LE05"),
+("W08","STANDING CALF","4X8 ","CM05"),
+("W09","LEG PRESS","3X7","LP05"),
+("W09","PULLDOWN","2X10","PB00"),
+("W09","STRAIGHT ARM PULL OVER","3X10","KB10"),
+("W09","HAMMER CURL","2X10","DB25"),
+("W09","HIP THRUST","3X10","BB05"),
+("W09","HAMSTRING CURL","3X8","LC05"),
+("W09","LEG EXTENSION","3X8","LE05"),
+("W10","TRICEP EXT","3X8","KB10"),
+("W10","SQUAT, LEG PRESS","3X5-7","BB05"),
+("W10","PEC FLY","3X10","MF05"),
+("W10","BB BENCH","3X6","BB05"),
+("W10","LEG EXTENSION","3X8","LE05"),
+("W10","SHOULDER PRESS","2X10","DB25"),
+("W10","REAR DELT ","3X8","KB10");
+
+
+
+

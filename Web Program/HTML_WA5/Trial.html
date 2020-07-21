@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body  onload="myFunction()">
+
+<p>Click the button to display the total width of your screen, in pixels.</p>
+
+<p id="demo"></p>
+
+
+
+<script>
+function myFunction() {
+    var x =screen.width;
+    if(x<900){
+    document.getElementById("demo").innerHTML = x;
+    }
+    else if(x>900)
+    document.getElementById("demo").innerHTML = x;
+}
+</script>
+
+</body>
+</html>

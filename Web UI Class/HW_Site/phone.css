@@ -1,0 +1,42 @@
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-style: solid;
+}
+body{
+  background-color: yellow;
+  background-image: url("phone.jpeg");
+}
+h1{
+  font-size: 40px;
+}
+img{
+  height: auto;
+  width:10vw;
+}
+
+.logo{
+  flex: 2;
+}
+.nav a {
+  color:inherit;
+  text-decoration: none;
+  font-weight: bold;
+  border:2px solid red;
+
+}
+.nav{
+  font-size: 18px;
+  text-align: center;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.info{
+  font-size: 16px;
+  flex: 5;
+}
+.social{
+  flex: 1;
+}

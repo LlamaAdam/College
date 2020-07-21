@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body onload="loader()">
+
+    <h1>Type inside of the box for an alert.</h1>
+    <input type="text" onkeypress="myFunction()">
+
+    <h1 id="demo1" onmouseover="mouseOver()">Mouseover to change text color.</h1><br>
+
+    <script>
+        function myFunction() {
+            alert("You typed in the box.");
+        }
+        function mouseOver() {
+            document.getElementById("demo1").style.color = "red";
+        }
+        function loader() {
+            alert("This completes the on-load section of the assignment.");
+        }
+    </script>
+
+</body>
+</html>
+
+

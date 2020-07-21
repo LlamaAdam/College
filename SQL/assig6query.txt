@@ -1,0 +1,14 @@
+String createString1 = "select b.ClientID,b.name,ContractNo, c.DateSigned FROM contract a join client b USING (ClientID) join longtermcontract c using (ContractNo) where b.Name like '%a%' group by contractno";
+String createString2 = "";
+
+
+rsmd.getColumnName(i)
+
+System.out.println("New value");
+
+
+select *
+from shorttermcontract s
+join driver d on s.driverassigned=d.documentid
+join vehicle v on s.VehicleAssigned=v.NumberPlate
+where v.MaxWeightLoad >= 1000;

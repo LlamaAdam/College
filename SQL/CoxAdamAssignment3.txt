@@ -1,0 +1,87 @@
+1.
+
+SELECT DISTINCT  LastName, FirstName, client.name
+FROM driver
+JOIN shorttermcontract ON shorttermcontract.driverassigned=driver.documentid
+JOIN contract USING (ContractNo)
+JOIN client USING (ClientID)
+ORDER BY driver.lastname ASC;
+
+2.
+SELECT client.name, tripno, origin, destination 
+FROM TRIP
+JOIN longtermcontract USING (ContractNo)
+JOIN contract USING (ContractNo)
+JOIN client USING (clientid)
+ORDER BY client.name,TripNo;
+
+3.
+SELECT DISTINCT lastname, firstname, vehicle.numberplate
+FROM driver
+JOIN trip ON trip.DriverAssigned=driver.DocumentID
+JOIN vehicle ON vehicle.NumberPlate=trip.VehicleAssigned
+JOIN longtermcontract USING (ContractNo) 
+ORDER BY LastName;
+
+4.
+SELECT DISTINCT  lastname, firstname, vehicle.NumberPlate
+FROM driver
+JOIN shorttermcontract ON shorttermcontract.driverassigned=driver.documentid
+JOIN vehicle ON vehicle.NumberPlate=shorttermcontract.VehicleAssigned
+WHERE basicsalary > 115000
+ORDER BY lastname ASC;
+
+5.
+
+SELECT DISTINCT trip.VehicleAssigned as 'Number_Plate', driver.lastname, driver.firstname
+FROM client
+JOIN contract USING (clientid)
+JOIN longtermcontract USING (ContractNo)
+JOIN trip USING (ContractNo)
+JOIN driver ON driver.DocumentID=trip.DriverAssigned
+WHERE client.name= 'Chris Rock';
+
+6.
+
+SELECT Count(tripno) as 'Trip_count', sum(distance) as'Distance_Traveled'
+FROM longtermcontract
+JOIN trip USING (ContractNo)
+JOIN driver ON driver.DocumentID=trip.DriverAssigned
+WHERE (driver.firstname like 'a%') OR (driver.firstname like 'b%') OR (driver.firstname like 'c%') OR (driver.firstname like 'd%');
+
+7.
+
+SELECT sum(weight)  as 'Total_weight', avg(weight)  as 'Avg_weight', min(weight)  as 'Min_weight', max(weight)  as 'Max_weight'
+FROM client
+JOIN contract USING (clientid)
+JOIN longtermcontract USING (ContractNo)
+JOIN trip USING (ContractNo)
+WHERE name like 'j%';
+
+
+8.
+SELECT avg(InsuranceValue)as 'Average_Insurance', sum(Price) as 'Total_price', sum(driver.CommissionPerTrip) as 'Total_commission'
+FROM shorttermcontract
+JOIN driver ON shorttermcontract.driverassigned=driver.documentid
+GROUP BY driver.documentid
+ORDER BY driver.CommissionPerTrip DESC;
+
+
+9.
+SELECT sum(trip.distance) as 'Total_distance', sum(trip.weight) as 'total_weight', name, trip.VehicleAssigned
+FROM client
+JOIN contract USING (clientid)
+JOIN longtermcontract USING (ContractNo)
+JOIN trip USING (ContractNo)
+GROUP BY Name
+having sum(trip.weight) > 5000;
+
+10.
+SELECT sum(trip.distance)*longtermcontract.pricepermile as 'Avg_Cost', name, avg(longtermcontract.insuranceperpound*trip.weight) as 'Average_Insurance_Value'
+FROM client
+JOIN contract USING (clientid)
+JOIN longtermcontract USING (ContractNo)
+JOIN trip USING (ContractNo)
+GROUP BY Name
+having avg(longtermcontract.insuranceperpound*trip.weight) < 4000;
+

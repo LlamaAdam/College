@@ -1,0 +1,194 @@
+:root{
+    --std-brdr:2px solid black;
+    --btm-brdr:1px solid black;
+    --seethru:rgba(0, 54, 15, 0.7);
+}
+.container {
+    display: grid;
+    grid-gap: 5px;
+    width: 100%;
+    height: auto;
+    
+    grid-template-areas: "logo logo logo"
+                         "first first first"
+                        "first  first first"
+                        "second third fourth";
+    
+}
+body{
+  font-family: 'Bree Serif', serif;
+  color: #FF0000;
+  background-image: url("images/meadow-2184989.jpg");
+  height: auto;
+}
+.logo{
+    grid-area: logo;
+}
+
+.first{
+    grid-area: first;
+}
+
+.second{
+    grid-area: second;
+}
+.third{
+    grid-area: third;
+}
+.fourth{
+    grid-area: fourth;
+}
+
+
+
+@media screen and (max-width: 480px) {
+
+        .container{
+        padding: 4px;
+         background-color: var(--seethru);
+    }
+    .first img{
+        float: left;
+        width:150px;
+        height: auto;
+    }
+    .first{
+        padding-left: 3px;
+        border: var(--std-brdr);
+        font-size: 14px;
+    }
+
+    .logo{
+        border: var(--std-brdr);
+        text-align: center;
+        font-size: 22px;
+    }
+    section{
+        padding: 5px;
+        border: var(--std-brdr);
+         font-size: 12px;
+    }
+        section img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 15px;
+           
+    }
+    
+    h2{
+        font-size: 22px;
+        border-bottom: var(--btm-brdr);
+    }
+.logo img{
+    width: 100%;
+    height: auto;
+}
+    h3{
+        font-size: 18px;
+        border-bottom: var(--btm-brdr);
+    }
+  }
+
+@media screen and (min-width: 481px) and (max-width: 800px) 
+{
+        .container{
+        padding: 6px;
+         background-color: var(--seethru);
+    }
+        .first{
+        padding-left: 3px;
+        border: var(--std-brdr);
+        font-size: 17px;
+    }
+
+    .first img{
+        float: left;
+        width:180px;
+        height: auto;
+    }
+
+    .logo{
+        border: var(--std-brdr);
+        text-align: center;
+        font-size: 30px;
+    }
+    
+    h2{
+        font-size: 30px;
+        border-bottom: var(--btm-brdr);
+    }
+.logo img{
+    width: 90%;
+    height: auto;
+}
+    h3{
+        font-size: 20px;
+        border-bottom: var(--btm-brdr);
+    }
+        section{
+        padding: 5px;
+        border: var(--std-brdr);
+    }
+    
+    section img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 80px;
+    
+}
+
+  }
+
+
+
+@media screen and (min-width: 801px) and (max-width: 1200px) {
+
+    .container{
+        padding: 8px;
+         background-color: var(--seethru);
+    }
+    
+    .first img{
+        float: left;
+        width:200px;
+        height: auto;
+    }
+    .first{
+        padding-left: 3px;
+        border: var(--std-brdr);
+        font-size: 18px;
+    }
+
+    .logo{
+        border: var(--std-brdr);
+        text-align: center;
+        font-size: 32px;
+    }
+    section{
+        padding: 5px;
+        border: var(--std-brdr);
+         font-size: 15px;
+    }
+        section img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 99px;
+           
+    }
+    
+    h2{
+        font-size: 40px;
+        border-bottom: var(--btm-brdr);
+    }
+.logo img{
+    width: 50%;
+    height: auto;
+}
+    h3{
+        font-size: 25px;
+        border-bottom: var(--btm-brdr);
+    }
+  }

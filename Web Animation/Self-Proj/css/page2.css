@@ -1,0 +1,46 @@
+body{
+    background-color: #CCCCCC;
+    font-family: 'Lilita One', cursive;
+}
+.square{
+    width:120px;
+    height:120px;
+    background:yellow;
+    position: relative;
+    animation: glide 4s infinite;
+}
+.squareRec{
+    width:120px;
+    height:120px;
+    background:blue;
+    position: relative;
+    animation: chunky 4s infinite;
+}
+#rect{
+    top:50%;
+    left:50%;
+    height:120px;
+    width:195px;
+    background: pink;
+    position:fixed;
+    border: 1px solid #e75480;
+}
+
+
+@keyframes glide{
+    0%{top: 0px;}
+    50%{top:200px;background: red;height:200px;width:200px;}
+    100%{top:0px;height:120px;width:120px;background: yellow;}
+}
+@keyframes chunky{
+    0%{top:200px;}
+    50%{top:0px;background:green;}
+    100%{top:-120px;background:yellow;}
+}
+
+@keyframes shift {
+  
+  0% {left: 0px;}
+  50% {left:500px;}  
+  100% {left:0px;}
+}

@@ -1,0 +1,64 @@
+1.
+select client.Name, ContractNo
+From shorttermcontract
+JOIN contract USING (ContractNo)
+Join client USING (ClientID)
+where insurancevalue > (select avg(insurancevalue) from shorttermcontract);
+
+2. 
+select client.Name, ContractNo
+From shorttermcontract
+JOIN contract USING (ContractNo)
+Join client USING (ClientID)
+WHERE (price>(select avg(price) from shorttermcontract))
+AND
+(insurancevalue <(select avg(insurancevalue) from shorttermcontract));
+
+3.
+select count(tripNo) AS 'Trips_above_average'
+from longtermcontract l 
+join trip t USING (contractNo)
+where (l.PricePerMile*t.Distance)>(select avg(l.PricePerMile*t.Distance) from longtermcontract l join trip t USING (contractNo)) AND (l.InsurancePerPound*t.weight)>(select avg(l.InsurancePerPound*t.weight) from longtermcontract l join trip t USING (contractNo));
+
+4.
+select d.Lastname, sum(l.pricepermile*t.distance)*(d.commissionpertrip/100)
+from driver d
+join trip t on t.Driverassigned = d.DocumentID
+JOIN longtermcontract l USING (ContractNo)
+where d.basicsalary = (select avg(basicsalary) from driver)
+group by d.lastname;
+
+
+5.
+select driverassigned, sum(distance) as 'total_distance', avg(weight) as 'average_weight' 
+from trip
+where driverassigned = (select documentID from driver having max(basicsalary));
+
+6.
+select UCASE(CONCAT_WS('-', LEFT(origin, 3), LEFT(Destination, 3), LEFT(MONTH(departuredate), 3), LEFT(DAYNAME(departuredate), 3)))as'Trip_Record'
+from trip;
+
+7.
+select d.LastName
+from trip t
+Join Driver d ON d.DocumentID=t.DriverAssigned
+where DATE(DepartureDate)>='2017/06/20' AND DATE(deliverystamp)<='2017/06/30';
+
+8.
+select c.Name, deliverystamp, datesigned
+from shorttermcontract
+JOIN contract USING (ContractNo)
+Join client c USING (ClientID)
+where DATEDIFF(deliverystamp, datesigned) <= 2;
+
+
+9.
+select tripno, DATEDIFF(deliverystamp, departuredate) as 'Days_traveled' 
+from trip
+Where Month(departuredate)=6 and YEAR(departuredate)=2017;
+
+10.
+select count(tripNo) as 'Number_Of_Trips', MONTH(departuredate) as 'Month_of_trip'
+from trip
+Group By MONTH(departuredate)
+Order By MONTH(departuredate) DESC;

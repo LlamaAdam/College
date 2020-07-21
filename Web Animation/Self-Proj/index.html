@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Index</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lilita+One&display=swap" rel="stylesheet"> 
+    <script src="js/index.js"></script>
+    <link href="css/index.css" rel='stylesheet' type='text/css' />
+</head>
+    <body onload="startmaster()">
+        <header>
+        This is the Index Page.
+        </header>
+        <div class="load" id="first">
+            <img src="Images/Paw-print.svg" class="paw1" id="paw1">
+            <img src="Images/Paw-print.svg" class="paw" id="paw2">
+            <img src="Images/Paw-print.svg" class="paw1"  id="paw3">
+            <img src="Images/Paw-print.svg" class="paw" id="paw4"> <br>
+            <section class="words">
+                Welcome to our site....
+            </section>
+        </div>
+        <div class="main" id="second">
+            <section onmouseover="bouncer(this)" onmouseleave="bounceout(this)">
+                <a href="not-found-page.html">404 page<br>3 GSAP, Timeline</a>
+            </section>
+            <section onmouseover="bouncer(this)" onmouseleave="bounceout(this)">
+                 <a href="page2.htlm">Second page<br>3 CSS w/ JS</a>
+            </section>
+            <section onmouseover="bouncer(this)" onmouseleave="bounceout(this)">
+                 <a href="page1.html">First Page<br>4 animations</a>
+            </section>
+            <section onmouseover="bouncer(this)" onmouseleave="bounceout(this)">
+                 <a href="Page3.html">Third Page<br>9 animations</a>
+            </section>
+        </div>
+            
+        <div></div>
+        <script src="http://cdn.jsdelivr.net/mojs/latest/mo.min.js"></script>
+    </body>
+</html>

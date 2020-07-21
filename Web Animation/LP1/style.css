@@ -1,0 +1,230 @@
+body, html {
+  background-color: #242F3F;
+  text-align: center;
+  color: red;
+    height: 100%;
+    font-family: 'Londrina Solid', cursive;
+}
+
+header
+{
+  text-align: center;
+  font-size: 48px;
+}
+
+#part2{
+  display: none;
+  text-align: left;
+  background-image: url("background.png");
+  background-size: cover;
+  height: 100%;
+  animation: pop-in .6s ease forwards;
+  opacity: 0;
+}
+.loader {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  border: 4px solid #Fff;
+  top: 50%;
+  animation: loader 2s infinite ease;
+}
+
+.loader-inner {
+  vertical-align: top;
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  background-color: #fff;
+  animation: loader-inner 2s infinite ease-in;
+}
+
+.Title
+{
+  opacity: 0;
+  animation: titler 2s ease-in forwards;
+  animation-delay: 2s
+}
+.axe
+{
+  text-align: center;
+}
+
+.scale {
+    animation: fadeAndScale 1s ease 0.2s forwards;
+}
+
+
+#mySidenav a{
+  animation: slide-left 1.5s;
+  color: blue;
+  transition-property: : color, background-color;
+  transition-duration: 1s;
+  transition-timing-function: ease;
+}
+a:hover{
+  border: 2px solid red;
+  background-color: gold;
+  transition-delay:.2s;
+  color: black;
+}
+a:visited{
+  color:white;
+}
+
+.sidenav {
+    display: none;
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color:#BF2525;
+    overflow-x: hidden;
+    padding-top: 60px;
+    opacity: 0;
+}
+#subPage{
+  text-align: center;
+}
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    display: block;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.container {
+  position: absolute;
+  left: -500px;
+  animation: slide 0.5s forwards;
+  animation-delay: 2s;
+}
+
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: red;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+#guy{
+  position: relative;
+  left: -1500px;
+  z-index:1;
+  animation: guy-slide 6s forwards ease-in;
+  animation-delay: 2s;
+}
+#axe{
+  opacity: 0;
+  animation: fadeAndScale 1s forwards ease-in;
+  animation-delay: 2s;
+}
+#axe:hover{
+  opacity: 1;
+  animation: scaler .5s ease-in;
+}
+
+@keyframes fadeAndScale {
+    0% {
+        opacity: 0;
+        transform: scale(2.0);
+    }
+    100% {
+      transform: scale(1.0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-left {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+@keyframes loader {
+  0% {transform: rotate(0deg);}
+  25% {transform: rotate(180deg);}
+  50% {transform: rotate(180deg);}
+  75% {transform: rotate(360deg);}
+  100% {transform: rotate(360deg);}
+}
+
+@keyframes loader-inner {
+  0% {height: 0%;}
+  25% {height: 0%;}
+  50% {height: 100%;}
+  75% {height: 100%;}
+  100% {height: 0%;}
+}
+
+@keyframes titler
+{
+  from {
+    opacity: 0;
+  transform: rotate(0deg);
+}
+to {
+  opacity: 1;
+  transform: rotate(360deg);
+}
+}
+@keyframes menuColor {
+  0% {background-color: red;}
+  100% {background-color: black;}
+}
+
+
+@keyframes pop-in {
+  0% {
+    opacity: 0;
+    transform:  translateY(-4rem) scale(8.8);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@keyframes slide {
+    100% {left: 25px;}
+  }
+  @keyframes guy-slide {
+      100%
+      {
+        transform: scaleX(-1);
+        left: 40%;
+      }
+    }
+  @keyframes scaler {
+    0%{transform: scale(0.2);}
+    50%{transform: scale(1.5);}
+    100%{transform: scale(1);}
+  }

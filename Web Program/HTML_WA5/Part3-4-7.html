@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <p id="demo"></p>
+
+    <button onclick="myFunction_sort()">Try it</button>
+    <p id="demo2"></p>  
+
+
+    <script>
+        var cars = new Array("Toyota", "Nissan", "Hyundai");
+        document.getElementById("demo").innerHTML = cars;
+        function myFunction_sort() {
+            cars.sort();
+            document.getElementById("demo2").innerHTML = cars;
+        }  
+    
+    
+    </script>
+
+</body>
+</html>
+
+

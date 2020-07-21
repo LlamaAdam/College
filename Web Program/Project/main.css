@@ -1,0 +1,82 @@
+body{
+    width: 100%;
+    height: 100%;
+}
+.index{
+    font-family: 'Donegal One', serif;
+    font-size: 2vw;
+    background-color: #bad4aa;
+    color: #dd9787;
+    border-color: #dd9787;
+}
+.pr{
+     font-family: 'Donegal One', serif;
+    font-size: 2vw;
+    background-color: #87a878;
+    color: #f4f0bb;
+    border-color: #43291f;
+}
+.about{
+    font-family: 'Nunito Script', serif;
+    font-size: 2vw;
+    background-color: #226f54;
+    color: #172a3a;
+    border-color: #43291f;
+}
+.product{
+    font-family: 'Medula One', serif;
+    font-size: 2vw;
+    background-color: #09bc8a;
+    color: #ff9b71;
+    border-color: #fffd82;
+}
+.enter{
+    font-family: 'Medula One', serif;
+    font-size: 2vw;
+    background-color: #333533;
+    color: #cfdbd5;
+    border-color: #fffd82;
+}
+a{
+    text-decoration: none;
+    color:inherit;
+    border: 2px solid;
+    padding: 2px;
+    
+}
+a:active, a:focus, a:hover{
+    background-color: gray;
+    color:white;
+}
+header{
+    border: 2px outset gray;
+    width: 98%;
+    font-size: 4vw;
+    text-align: center;
+    padding: 10px;
+}
+
+footer{
+    font-size: 2vw;
+    border: 2px inset gray;
+    width: 98%;
+    padding: 8px;
+}
+.cen{
+    text-align: center;
+}
+.index header, .index footer{
+    background-color: #678d58;
+}
+.pr header, .pr footer{
+    background-color: #226f54;
+}
+.about header, .about footer{
+    background-color: #74b3ce;
+}
+.product header, .product footer{
+    background-color: #e84855;
+}
+.enter header, .enter footer{
+    background-color: #242423;
+}

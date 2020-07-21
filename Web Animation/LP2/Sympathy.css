@@ -1,0 +1,228 @@
+boxes{
+
+}
+.center{
+    text-align: center;
+    font-family: cursive;
+    font-size: 3em;
+}
+.navigation {
+  list-style: none;
+  margin-left: 10%; 
+    margin-right: 10%; 
+  background: deepskyblue;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  justify-content: left;
+}
+
+.navigation a {
+  text-decoration: none;
+  display: block;
+  padding: 1em;
+  color: white;
+}
+
+.navigation a:hover {
+  background: darken(deepskyblue, 2%);
+}
+
+.flex-container-row1 img{
+    height: 20;
+}
+.flex-container-row2 {
+    border:groove;
+    text-align: center; 
+    display: flex;
+   width: 80%;
+    height: 500;
+  margin: 0 auto;
+    background-color: skyblue;
+    font-family: 'Happy Monkey', cursive;
+    color: red;
+    font-size: 26px;
+}
+.flex-container-row2 img{
+    width:45%;
+    align-content: center;
+    float: left;
+}
+.flex-container-row1-hidden {
+    display: none;
+    width: 100%;
+    background-color: lightgrey;
+}
+.flex-container-row1-page2 {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    background-color: #9ba2dd;
+}
+.sidenav {
+    opacity: 0;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+.sidenav_right {
+    height: 40%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 200;
+    right: 0;
+    background-color: #ed9e9e;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+.rgt{
+    margin-left: 75%;
+}
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+.sidenav a:hover, .offcanvas a:focus {
+        color: #f1f1f1;
+  }
+.btn {
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    padding: 25px;
+    margin: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    outline: none;
+    position: relative;
+    background-color: orangered;
+    border: solid 1px transparent;
+    border-radius: 10px;
+}
+
+@media all and (max-width: 800px) {
+    .navigation {
+    justify-content: space-around;
+  }
+  
+}
+
+@media all and (max-width: 400px) {
+  .navigation {
+    -webkit-flex-flow: column wrap;
+    flex-flow: column wrap;
+    padding: 0;
+  }
+  .navigation a { 
+    text-align: center; 
+    padding: 10px;
+    border-top: 1px solid rgba(255,255,255,0.3); 
+    border-bottom: 1px solid rgba(0,0,0,0.1); 
+  }
+  .navigation li:last-of-type a {
+    border-bottom: none;
+  }
+   .flex-container-row1 {
+    display: none;
+    width: 100%;
+    background-color: lightgrey;
+   flex-flow:column;
+}
+.flex-container-row2 {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-flow:column;
+    width: 80%:
+    background-color: lightgrey;
+    font-size:14px;
+   
+}
+  .flex-container-row1-page2 {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    background-color: lightgrey;
+      
+}
+ .flex-container-row1-hidden {
+    display: flex;
+    width: 100%;
+    background-color: lightgrey;
+    flex-flow: row  ;
+}
+    .card-page2 img{
+        width: 50%;
+        margin-left: 26%;
+    }   
+ .cardh-item   {
+   align-self: center;
+    width: 50%;
+    margin-left: 10%;  
+}     
+.cardh-item  img {
+    width: 100%; 
+    margin-top: 5%;
+}  
+.card1-item {
+    width: 100%;  
+}  
+.card2-item {
+   width: 100%;
+}  
+ .card1-item img{
+    width: 90%;  
+}  
+.card2-item img {
+   width: 90%;
+}
+    
+}
+.logo{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+}
+#fullCard1{
+    display: none;
+  margin-left: auto;
+  margin-right: auto;
+    width:100%;
+}
+#fullCard2{
+    display: none;
+  margin-left: auto;
+  margin-right: auto;
+    width:100%;
+}
+#fullCard3{
+    display: none;
+  margin-left: auto;
+  margin-right: auto;
+    width:100%;
+}

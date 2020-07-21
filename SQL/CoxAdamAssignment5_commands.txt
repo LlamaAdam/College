@@ -1,0 +1,36 @@
+
+
+
+CREATE TABLE Trainer(TrainerID varchar(7) NOT NULL, 
+FirstName text DEFAULT NULL,
+LasstName text DEFAULT NULL, 
+Salary FLOAT DEFAULT NULL,
+DaysAvailable BIT(7) DEFAULT NULL,
+PRIMARY KEY (TrainerID));
+
+CREATE TABLE client (ClientID varchar(7) NOT NULL, 
+FirstName text DEFAULT NULL,
+LasstName text DEFAULT NULL, 
+LegalAddress text DEFAULT NULL, 
+Phone text DEFAULT NULL, 
+PRIMARY KEY (ClientID));
+
+CREATE TABLE contract (ContractID varchar(7) NOT NULL, 
+ClientID varchar(7) DEFAULT NULL, 
+TrainerID varchar(7) DEFAULT NULL, 
+PRIMARY KEY (ContractNo), 
+KEY FK_Contract_to_Client (ClientID), 
+CONSTRAINT FK_Contract_to_Client FOREIGN KEY (ClientID) REFERENCES client (ClientID),
+KEY FK_Contract_to_Trainer (TrainerID), 
+CONSTRAINT FK_Contract_to_Trainer FOREIGN KEY (TrainerID) REFERENCES client (TrainerID));
+
+CREATE TABLE Weights (WeightID varchar(7) NOT NULL,
+Weight Type
+Weight Incruments
+PRIMARY KEY (WeightID)
+
+
+INSERT INTO client VALUES ('145696S','Sarah Silverston','PO Box 4622 Delaware 19707','555-555-0008'),('156836P','Joy Behar','PO Box 687 Delaware 19706','555-555-0007'),('278544C','Chris Rock','PO Box 354 Delaware 19703','555-555-0002'),('394204C','Conan Brian','PO Box 34344 Delaware 19707','555-555-0009'),('472507P','Charles Chaplin','PO Box 9587 Delaware 19707','555-555-0010'),('736533Q','Jay Leno','PO Box 216 Delaware 19702','555-555-0004'),('765256P','Eddie Murphee','PO Box 4287 Delaware 19703','555-555-0003'),('842471P','Whopie Goldberg','PO Box 884 Delaware 19706','555-555-0006'),('865263C','Wanda Sykes','PO Box 56944 Delaware 19706','555-555-0005'),('933256Q','Jerry Seinfeld','PO Box 12221 Delaware 19702','555-555-0001');
+
+
+INSERT INTO contract VALUES ('CO0010','933256Q',0),('CO0011','278544C',1),('CO0012','765256P',0),('CO0013','736533Q',1),('CO0014','865263C',1),('CO0015','842471P',0),('CO0016','156836P',1),('CO0017','145696S',0),('CO0018','394204C',1),('CO0019','472507P',0);

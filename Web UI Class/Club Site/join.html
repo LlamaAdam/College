@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Kansas City Soccer Club</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" href="main.css">
+        <meta name="viewport" content="user-scalable=no, width=device-width"/>
+        <link href="pc.css" rel="stylesheet" type="text/css">
+        <link href="phone.css" rel="stylesheet" type="text/css" media=" only screen and (max-width:480px)">
+        <link href="tablet.css" rel="stylesheet" type="text/css" media=" only screen and (min-width:481px) and (max-width:800px)">
+        <link href="https://fonts.googleapis.com/css?family=Germania+One" rel="stylesheet">
+        <script src="code.js" type="text/javascript"></script>
+
+    </head>
+
+
+<body>
+
+<div class="container">
+  <div class="logo">
+    <img src="images/top.png" alt="KC Soccer Club Logo">
+  </div>
+  <div class="nav">
+    <a href="home.html">Home </a>
+    <a href="events.html">Events</a>
+    <a href="history.html">History</a>
+    <a href="awards.html">Awards</a>
+    <a href="tutorial.html">Tutorial</a>
+    <a href="products.html">Products</a>
+    <a href="join.html">Join Now!</a>
+      <a href="newsletter.html">New's Corner!</a>
+  </div>
+  <div class="content">
+      <form action="part2.html" form id="form1" method ="get">
+          Please enter your information here:<br>
+          <div id="one">
+          What is you first name?
+              <input type="text" id="q1" required>
+          <button type="button" id="submit" onclick="show_div('two'); return false;">next</button>
+          </div>
+          <div id="two">
+          What is you last name?
+              <input type="text" id="q2" required>
+          <button type="button" id="submit" onclick="show_div('three'); return false;">next</button>
+          </div>
+          <div id="three">
+          What is your address?
+              <input type="text" id="q3" required>
+              <button type="button" id="submit" onclick="show_div('four'); return false;">next</button>
+          </div>
+          <div id="four">
+          What city are you located in?
+              <input type="text" id="q4" required>
+              <button type="button" id="submit" onclick="show_div('five'); return false;">next</button>
+          </div>
+          <div id="five">
+          What state are you in?
+              <input type="text" id="q5" required>
+              <button type="button" id="submit" onclick="show_div('six'); return false;">next</button>
+          </div>
+          <div id="six">
+          What is your email address?
+              <input type="text" id="q6" required>
+              <button type="button" id="submit" onclick="show_div('seven'); return false;">next</button>
+          </div>
+          <div id="seven">
+          What is your phone number?
+              <input type="text" id="q7" required>
+              <button type="button" id="submit" onclick="show_div('eight'); return false;">next</button>
+          </div>
+          <div id="eight">
+         Press submit to enter results
+          <input type="submit">
+        </div>
+      </form>
+
+  </div>
+  <div class="social">
+    Contact Us: 123 Main St Kansas City, Mo 64108 <br>
+    Phone:816-555-5555 <br>
+    Email:KCSportsClub@gmail.com
+  </div>
+
+</div>
+
+</body>

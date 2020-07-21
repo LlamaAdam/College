@@ -1,0 +1,180 @@
+body
+{
+  font-family: 'Roboto', sans-serif;
+  color: white;
+}
+a:link {
+  text-decoration: none;
+  color: white;
+
+}
+a:visited{
+  color:white;
+}
+.box
+{
+  position: fixed;
+  width: 900px;
+  height: 500px;
+
+}
+.bluebox
+{
+  position: absolute;
+  background-color: blue;
+  width: 900px;
+  height: 250px;
+  z-index: -1;
+  animation: skycolor 3s infinite alternate;
+  animation-delay: 5s;
+}
+.greenbox
+{
+  position: relative;
+  background-color: green;
+  top: 250px;
+  width: 900px;
+  height: 250px;
+  z-index: -1;
+  animation: ground 2s forwards;
+  animation-delay: .1s;
+}
+.Ball
+{
+  position: relative;
+  left: -500px;
+  top:-150px;
+  z-index:1;
+  animation: slide 0.75s forwards ease-in;
+  animation-delay: 2s;
+}
+.Intro
+{
+  position: relative;
+  z-index: 3;
+  top: 0px;
+  animation: newsScroll 0.75s forwards ease-in;
+  animation-delay: 2s;
+}
+
+.RedBox {
+    position: relative;
+
+    top: -50px;
+    z-index: 2;
+    text-align:right;
+}
+.linkOne
+{
+    position: relative;
+    width: 60px;
+    background-color: red;
+    border: 5px solid red;
+    padding: 2px;
+    margin: 2px;
+}
+.linkone a:hover
+{
+  display: inline-block;
+  animation: redSign 3s ease-in-out infinite alternate;
+}
+.linkTwo
+{
+  position: relative;
+  background-color: red;
+  border: 5px solid red;
+  padding: 2px;
+  margin: 2px;
+}
+.linkTwo a:hover
+{
+  display: inline-block;
+  animation: bounceArrow 1s ease-in infinite alternate;
+}
+
+.link
+{
+  position: relative;
+  top:800px;
+  left:380px;
+  //end at -30px
+  text-align: center;
+  animation: linkUp 3s forwards ease-in;
+  animation-delay: 4s;
+  z-index: 3;
+}
+.Intro
+{
+  position: absolute;
+  color:blue;
+  height: 0px;
+  animation: newsScroll 2.5s forwards ease-in;
+  animation-delay: 4s;
+}
+@keyframes slide
+{
+    0%
+    {
+      transform: scale(2.0);
+    }
+    100%
+    {
+      transform: scale(1.0);
+      left: 0;
+    }
+}
+@keyframes skycolor {
+  0% {background-color: blue;}
+  100% {background-color: violet;}
+}
+@keyframes ground {
+  0% {transform: scale(-1);}
+  100% {transform: scale(1.0);}
+}
+@keyframes redSign {
+  0% {
+  transform: scale(1.0);
+  background-color: red;
+}
+100% {
+  transform: scale(1.4);
+  background-color: orange;
+
+}
+}
+@keyframes bounceArrow {
+  0% {
+  transform: scale(1.0);
+  background-color: red;
+}
+100% {
+  transform: scale(1.2);
+  left:10;
+}
+}
+
+@keyframes newsScroll {
+  0%
+  {
+    color:blue;
+  }
+  1%
+  {
+    color:white;
+    transform: scale(1.5);
+  }
+  100%
+  {
+    color:white;
+    transform: scale(1.0);
+    top:280px;
+  }
+}
+@keyframes linkUp {
+  0% {
+    top: 400px;
+  }
+  100% {
+    top:-30px;
+  }
+}

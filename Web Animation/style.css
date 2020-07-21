@@ -1,0 +1,33 @@
+.first{
+  list-style-type: none;
+  margin: 1;
+  padding: 5px;
+  width: 60px;
+  animation: fadein 2s;
+  animation-delay: .5s;
+}
+li{
+  border: 1px solid #555;
+}
+.second li{
+  display: inline;
+}
+.first li:hover{
+  background-color:#555;
+}
+.second{
+  position: absolute;
+  left: -500px;
+  animation: slide 0.5s forwards;
+  animation-delay: 2s;
+}
+
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@keyframes slide {
+    100% { left: 0; }
+}

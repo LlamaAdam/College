@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Main Page</title>
+    <link rel="stylesheet" href="main.css">
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+</head>
+<body onload="imagechange()">
+    <script>
+        function nightmode() {
+            document.body.style.backgroundColor = "black";
+            document.body.style.color = "white";
+            var myDiv = document.getElementById('myh1');
+            myDiv.className = 'myh1-alternate';
+        }
+        function daymode() {
+            document.body.style.backgroundColor = "white";
+            document.body.style.color = "black";
+            var myDiv = document.getElementById('myh1');
+            myDiv.className = 'myh1-normal';
+        }
+        function myfood() {
+            var x = document.getElementById("food").value;
+            var foodImage= new Array("Llama.jpg", "Pear.jpg", "Apple.jpg")
+            if(x=="Korean Pear"){
+                document.getElementById("foodImage").src = foodImage[1];
+            }
+           if(x=="Llama"){
+                document.getElementById("foodImage").src = foodImage[0];
+            }
+          if(x=="Apple"){
+                document.getElementById("foodImage").src = foodImage[2];
+            }
+        }
+        var pics = new Array();
+        var picslink = new Array();
+        pics[0]="ask.jpg";
+        picslink[0]="https://www.ask.com/";
+        pics[1]="bing.jpg";
+        picslink[1]="https://www.bing.com/";
+        pics[2]="web.jpg";
+        picslink[2]="https://www.webcrawler.com/";
+        var counter = -1;
+        function imagechange(){
+            counter++;
+            if(counter>pics.length-1){
+                counter=0
+            }
+            setTimeout("imagechange()", 8000);
+            document.getElementById('adImage').src=pics[counter];
+            document.getElementById('adImageLink').href=picslink[counter];
+            
+        }
+        
+    </script>
+    <button onclick="nightmode()">Night mode</button>
+    <button onclick="daymode()">Day Mode</button>
+    <h1 id="myh1" class="myh1-normal">
+        Welcome to my project. The buttons above will change the colors of the page, text, and links.<br><br>
+         <select id="food">
+             <option value="Llama">Llama</option>
+             <option value="Korean Pear">Korean Pear</option>
+             <option value="Apple">Apple</option>
+        </select><br>
+        <button onclick="myfood()">Click to display item.</button>
+        <p id="demo">
+            <img src="" id="foodImage">
+        </p>
+        <a href="http://www.google.com">Google link if you need it.</a>
+        <p id></p>
+    </h1>
+    <a id="adImageLink" href=""><img src="" id="adImage" /></a>
+
+</body>
+</html>

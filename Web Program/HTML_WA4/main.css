@@ -1,0 +1,70 @@
+body{
+    font: "Times New Roman";
+    background-color: aliceblue;
+    
+}
+a{
+    text-decoration: none;
+    font-weight: bold;
+    color: inherit;
+}
+a:hover{
+    color: white;
+    background-color: black;
+}
+
+.cen{
+    text-align: center;
+}
+.lef{
+    text-align: left;
+}
+h1{
+    font: "Tahoma";
+    font-size: 22pt;
+}
+table, td{
+    border:1px solid black;
+    font-size: 16pt;
+}
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: left;
+    
+}
+.side{
+    float: left;
+    border: 10pt;
+    border-color: black;
+    border-style: solid;
+    border-width: thick;
+    
+    
+}
+
+.midnight{
+    background-color: #5FFFF9;
+    color: #B2470D;
+}
+.vice{
+    background-color: #B27746;
+    color: #5FE8FF;
+}
+.paradise{
+    background-color: #1F20B2;
+    color: #FFDC45;
+}
+.break{
+    background-color: #B2431F;
+    color: #1CB28F;
+}
+.shake{
+    background-color: #AAAAAA;
+    color: #A2FFBC;
+}
+.take{
+    background-color: #75FFD7;
+    color: #FF58FC;
+}

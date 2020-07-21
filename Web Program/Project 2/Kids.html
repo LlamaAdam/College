@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html> 
+    <head> 
+        <title>The Zoo</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <script src="code.js" type="text/javascript"></script>
+        <link href="main.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Ewert" rel="stylesheet">
+    </head>
+
+
+<body>
+    <header>
+        <img src="Images/ZooLogo.jpg" id="logo" height="150">
+        <h1 id="HeadWords">The Downtown Zoo.</h1><br>
+    </header>
+    
+    <div class="page">
+        <div class="column menu">
+            <ul>
+                <li><a href="home.html">Main Page</a></li>
+                <li><a href="Calendar.html">Calendar</a></li>
+                <li><a href="Catalog.html">Catalog</a></li>
+                <li><a href="index.html">Index</a></li>
+                <li><a href="Kids.html">Kids Page</a></li>
+                <li><a href="Registration.html">Registration Page</a></li>
+                <li><a href="Animals.html">Animal Exhibits</a></li>
+            </ul>
+        </div>
+
+        <div class="column content">
+            <h1>Children Section.</h1>
+            <div>
+                Welcome children if you are interested in some activities I would recommend the underwater ride.<br>
+                Another fun experience is the badger exhibit, featuring the famous snake. Unfortunately the mushroom has been eaten.<br>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/EIyixC9NsLI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+            <h3><a href="Images/LlamaColor.jpg"> Click here for a colorable llama image.</a></h3>
+            <h2>Feed the Animal</h2>
+            <div id="animal">
+            <div class="gallery">
+                <img src="Images/Cow.jpg" id="">
+                <div class="desc">
+                    <input type="radio" name="animal" value="a" checked> Cow<br>
+                </div>
+            </div>
+            <div class="gallery">
+                <img src="Images/Lion.jpg" id="">
+                <div class="desc">
+                    <input type="radio" name="animal" value="b" checked> Lion<br>
+                </div>
+            </div>
+            <div class="gallery">
+                <img src="Images/Seal.jpg" id="">
+                <div class="desc">
+                    <input type="radio" name="animal" value="c" checked> Seal<br>
+                </div>
+            </div>
+            <div class="gallery">
+                <img src="Images/elephant.JPG" id="">
+                <div class="desc">
+                    <input type="radio" name="animal" value="d" checked> Elephant<br>
+                </div>
+            </div>
+            </div>
+            
+            
+            <h2>Select the correct food.</h2>
+            <div id="food">
+            <div class="gallery">
+                <img src="Images/meat.jpg" id="">
+                <div class="desc">
+                    <input type="radio" name="food" value="a" checked> Meat<br>
+                </div>
+            </div>
+            <div class="gallery">
+                <img src="Images/Corn.jpg" id="">
+                <div class="desc">
+                    <input type="radio" name="food" value="b" checked> Corn<br>
+                </div>
+            </div>
+            <div class="gallery">
+                <img src="Images/Fish.jpg" id="">
+                <div class="desc">
+                    <input type="radio" name="food" value="c" checked> Fish<br>
+                </div>
+            </div>
+            <div class="gallery">
+                <img src="Images/Hay.jpg" id="">
+                <div class="desc">
+                    <input type="radio" name="food" value="d" checked> Hay<br>
+                </div>
+            </div>
+            <h2>Please type the number of servings.<input type="number" max="999" id="foodqty"></h2>
+            <button onclick="feedanimals()">Calculate food needed to feed.</button>
+            <div id="results">
+                <div id="incorrect"></div>
+                <div id="animal"></div>
+                <div id="food"></div>
+                <div id="needed"></div>
+            </div>	
+            </div>	
+            
+        </div>
+    </div>
+
+</body>
+</html>

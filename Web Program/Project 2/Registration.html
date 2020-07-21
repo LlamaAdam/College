@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html> 
+    <head> 
+        <title>The Zoo</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <script src="code.js"></script>
+        <link href="main.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Ewert" rel="stylesheet">
+    </head>
+
+
+<body>
+    <header>
+        <img src="Images/ZooLogo.jpg" id="logo" height="150">
+        <h1 id="HeadWords">The Downtown Zoo.</h1><br>
+    </header>
+    
+    <div class="page">
+        <div class="column menu">
+            <ul>
+                <li><a href="home.html">Main Page</a></li>
+                <li><a href="Calendar.html">Calendar</a></li>
+                <li><a href="Catalog.html">Catalog</a></li>
+                <li><a href="index.html">Index</a></li>
+                <li><a href="Kids.html">Kids Page</a></li>
+                <li><a href="Registration.html">Registration Page</a></li>
+                <li><a href="Animals.html">Animal Exhibits</a></li>
+            </ul>
+        </div>
+
+        <div class="column content">
+            <h1>Registration for newsletter.</h1>
+            <div class="flex">
+            <form action="Part2.html" method ="post">
+                Please enter your information here:<br>
+                First Name: <input type="text" name="fname" required><br>
+                Last Name: <input type="text" name="lname" required><br>
+                Address: <input type="text" name="adres" required><br>
+                City:<input type="text" name="city" required>State:<select name="state" required>
+                <option value="Missouri">Missouri</option>
+                <option value="Kansas">Kansas</option>
+                <option value="Virginia">Virginia</option>
+                </select><br>
+                Email Address:<input type="text" name="email"required><br>
+                Phone Number:<input type="text" name="phone"required><br>
+                <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

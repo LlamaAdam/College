@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+    font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+    display: none;
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #efb852;
+    overflow-x: hidden;
+    padding-top: 60px;
+    opacity: 0;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    display: block;
+    color:red;
+
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+
+
+</style>
+   <link rel="stylesheet" href="sideam.css">
+</head>
+<body>
+
+<div id="mySidenav"  class="sidenav scale">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>
+
+<h2>Sidenav Example</h2>
+<p>Click on the element below to open the side navigation menu.</p>
+
+
+
+<div class="container" onclick="myFunction(this)">
+  <div class="bar1"></div>
+  <div class="bar2"></div>
+  <div class="bar3"></div>Open
+</div>
+
+
+<script>
+function openNav() {
+
+
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.display = "none";
+}
+function myFunction(x) {
+  document.getElementById("mySidenav").style.display = "block";
+  x.classList.toggle("change");
+}
+
+</script>
+
+</body>
+</html>

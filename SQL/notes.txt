@@ -1,0 +1,37 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+insert into FLIGHTCONCESSION
+values('D01','MCI','KCRZ',1010111,'07:25');
+insert into FLIGHTCONCESSION
+values('D02','DCA','EGVN',1111111,'08:30');
+insert into FLIGHTCONCESSION
+values('D03','ICN','VA2C',1010101,'12:00');
+insert into FLIGHTCONCESSION
+values('D04','ATL','CDG',0101010,'09:00');
+insert into FLIGHTCONCESSION
+values('D05','JAX','MAN',1101010,'05:00');
+
+
+
+insert into SCHEDULEDFLIGHT 
+values('D05', '2019-06-03', '28', 'BB07');
+insert into SCHEDULEDFLIGHT 
+values('D04', '2019-06-15', '22', 'BB08');
+insert into SCHEDULEDFLIGHT 
+values('D03', '2019-06-20', '18', 'BB02');
+insert into SCHEDULEDFLIGHT 
+values('D02', '2019-06-19', '16', 'BB09');
+insert into SCHEDULEDFLIGHT 
+values('D01', '2019-06-18', '12', 'BB01');
+

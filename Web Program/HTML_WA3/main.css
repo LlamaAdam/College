@@ -1,0 +1,88 @@
+
+body{
+    background-color:beige;
+    font-family: "Comic Sans MS";
+    color:darkslateblue;
+    font-size: .75em;
+
+}
+a:link,a:visited{
+    color:darkred;
+    text-decoration: none;
+    font-size: 1.0em;
+}
+a:link:hover {
+    color: darkgreen;
+    text-decoration: none;
+    font-size: 1.0em;
+}
+
+h2{
+    color: magenta;
+    font-weight: bold;
+    font-size: 80%;
+    
+}
+h3{
+    background-color: #39f;
+    border-bottom-width: thin;
+    border-bottom-style: solid;
+    border-bottom-color: #003;
+    margin: 35px;
+    text-align: center;
+}
+
+p{
+    font-family: "Georgia";
+    color: #030;
+    padding: 15px;
+}
+
+li{
+    background-color: lightgray;
+    font-family: "Arial";
+    font-weight: bold;
+    font-size: 18pt;
+    color: black;
+}
+
+.navtable{
+    font-family: "Times New Roman";
+    font-weight: bold;
+    text-align: center;
+    background-color: #0ff;
+    
+}
+.maintable{
+    background-color: lightgreen;
+    border-width: thick;
+    border-style: solid;
+    border-color: #007a99;
+    
+}
+.ex1table{
+    font: "Tahoma";
+    font-weight: bold;
+    font-size: 10pt;
+    background-color: #699;
+    color:#033;
+    margin: 25px;
+    padding: 25px;
+    
+}
+.ex2table{
+    background-color: #66c;
+    border-width: 10px;
+    border-style: solid;
+    border-color: #06c;
+    font-size: 10px;
+    color: #ccc;
+}
+.header{
+    font-family: "Arial Black";
+    font-size: 36pt;
+    background-color: #6ff;
+    color: #030;
+    margin: 50px;
+    padding: 50px;
+}

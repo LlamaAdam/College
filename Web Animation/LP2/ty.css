@@ -1,0 +1,27 @@
+body {
+    margin-top: 200px;
+    color: white;
+    height: 100%;
+    font-family: 'Londrina Solid', cursive;
+}
+.flex-container {
+background-color: green;
+height: 400px;
+display: flex;
+align-items: center;
+justify-content: center;
+opacity: 0;
+}
+
+.flex-item {
+background-color: Red;
+width: 100px;
+height: 75px;
+margin: 10px;
+font-size: 48px;
+text-align: center;
+opacity: 1;
+}
+.six {
+  visibility: hidden;
+}
