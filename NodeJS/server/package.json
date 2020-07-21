@@ -1,0 +1,16 @@
+{
+    "name": "tm-test-frontend-api",
+    "description": "Simple testcase to prove coding ability",
+    "version": "1.0.0",
+    "private": "true",
+    "license": "Private",
+    "author": "Martin Bukowski <engineering@telememory.co>",
+    "scripts": {
+        "start": "node index.js",
+        "dev": "nodemon index.js"
+    },
+    "dependencies": {
+        "express": "^4.17.1",
+        "nodemon": "^2.0.4"
+    }
+}
