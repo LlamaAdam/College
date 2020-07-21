@@ -1,0 +1,24 @@
+/****************************************
+* Animal.css
+* <Adam Cox>
+*
+* This is the css for ClickTracker
+****************************************/
+.root
+{
+	-fx-pref-width: 510;
+	-fx-pref-height: 250;
+	-fx-alignment: center;
+	-fx-spacing: 5;
+	-fx-hgap: 30;
+	-fx-vgap: 15;
+}
+.label
+{
+	-fx-alignment: center;
+	-fx-pref-width: 115;
+}
+.button
+{
+	-fx-pref-width: 115;
+}

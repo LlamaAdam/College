@@ -1,0 +1,18 @@
+/****************************************
+* Animal.css
+* <Adam Cox>
+*
+* This is the css for AnimalGuess
+****************************************/
+
+.root{
+	-fx-pref-width: 800;
+	-fx-pref-height: 250;
+	-fx-alignment: center;
+	-fx-hgap: 20;
+	-fx-padding: 3;
+	-fx-font-size: 20;
+}
+.dataBox{-fx-pref-column-count: 15;}
+.fontSize{-fx-font-size: 40;}
+Label{-fx-text-fill: blue;}
